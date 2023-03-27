@@ -1,0 +1,22 @@
+apiVersion: app/v1
+kind: Deployment
+metadata:
+  name: k8s-web-users
+spec:
+  selector:
+    matchLabels:
+      app: k8s-web-users
+  template:
+    metadata:
+      labels:
+        app: k8s-web-users
+    spec:
+      containers:
+      - name: k8s-web-users
+        image: bstashchuk/k8s-web-users
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
