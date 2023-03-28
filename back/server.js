@@ -21,6 +21,8 @@ app.listen(port, () => {
 
 const { MongoClient } = require("mongodb");
 const uri = "mongodb://root:password@database:27017";
+// const uri = "mongodb://myUserAdmin:myUserAdmin@localhost:27017";
+// อันบนเอาไว้เปลี่ยนเวลาจะแก้ไขข้อมูลในเครื่อง
 
 
 const mongoose = require('mongoose');
