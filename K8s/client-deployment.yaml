@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: client
+  template:
+    metadata:
+      name: client-pods
+      labels:
+        app: client
+    spec:
+      containers:
+        - name: client
+          image: nutthanon/os-web-only
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-service
+spec:
+  type: NodePort
+  selector:
+    app: client
+  ports:
+    - port: 3000 #defult port ภายในที่เราใช้
