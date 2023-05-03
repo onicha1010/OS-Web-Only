@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: nutthanon/os-web-only
+          image: onicha/os-web-only
 
 ---
 apiVersion: v1
@@ -27,4 +27,4 @@ spec:
   selector:
     app: client
   ports:
-    - port: 3000 #defult port ภายในที่เราใช้
+    - port: 3000 

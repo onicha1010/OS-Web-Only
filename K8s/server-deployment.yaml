@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: nutthanon/os-server-only
+          image: onicha/os-web-back
 
 ---
 apiVersion: v1

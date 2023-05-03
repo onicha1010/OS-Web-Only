@@ -16,6 +16,13 @@ spec:
       containers:
         - name: mongo
           image: mongo
+          volumeMounts:
+            - name: mongo-storage
+              mountPath: /data/db
+      volumes:
+        - name: mongo-storage
+          persistentVolumeClaim:
+            claimName: mongo-pvc
 ---
 apiVersion: v1
 kind: Service
@@ -28,4 +35,3 @@ spec:
   ports:
     - port: 27017 #defult port ภายในที่เราใช้
       targetPort: 27017 #port ที่ app เราใช้
-

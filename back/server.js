@@ -10,7 +10,6 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("Hello World!!");
-  // res.render(`index.html`)
 });
 
 app.listen(port, () => {
@@ -19,7 +18,6 @@ app.listen(port, () => {
 
 const { MongoClient } = require("mongodb");
 const uri = "mongodb://mongo:27017";
-// อันบนเอาไว้เปลี่ยนเวลาจะแก้ไขข้อมูลในเครื่อง
 
 const mongoose = require("mongoose");
 
