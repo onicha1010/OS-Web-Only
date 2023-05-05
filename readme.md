@@ -9,3 +9,10 @@ kubectl port-forward deployment.apps/client-deployment 3000:80
 ```
 kubectl port-forward deployment.apps/server-deployment 8000:8000
 ```
+
+
+# Open with:
+
+```
+localhost:8080
+```
